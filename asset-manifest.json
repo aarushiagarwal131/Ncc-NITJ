@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Ncc-NITJ/static/css/main.92b55af2.css",
+    "main.js": "/Ncc-NITJ/static/js/main.fc31e0fb.js",
+    "static/js/787.975afb15.chunk.js": "/Ncc-NITJ/static/js/787.975afb15.chunk.js",
+    "static/media/Pledge.jpg": "/Ncc-NITJ/static/media/Pledge.d82ad49abd3399785887.jpg",
+    "static/media/carousel1.jpg": "/Ncc-NITJ/static/media/carousel1.03900c18bf499548579a.jpg",
+    "static/media/carousel3.jpg": "/Ncc-NITJ/static/media/carousel3.387ffc1c4f0a699091dc.jpg",
+    "static/media/carousel2.png": "/Ncc-NITJ/static/media/carousel2.dd80d23a3e7f9f1e307d.png",
+    "static/media/NITJ Logo.png": "/Ncc-NITJ/static/media/NITJ Logo.f2c76d0937070ba81dc0.png",
+    "static/media/NCC Logo.png": "/Ncc-NITJ/static/media/NCC Logo.7ecce15f08d0d2018927.png",
+    "static/media/Aim.jpg": "/Ncc-NITJ/static/media/Aim.3133e44fcf7fe6bb768a.jpg",
+    "static/media/maps.png": "/Ncc-NITJ/static/media/maps.ce8f87a80157d4d9b3bb.png",
+    "static/media/phoneIcon.svg": "/Ncc-NITJ/static/media/phoneIcon.7c4390087475dd4544ad7e7fda5c400f.svg",
+    "static/media/facebookIcon.svg": "/Ncc-NITJ/static/media/facebookIcon.aa30813ee4fc9adcc0e1407eb36ddc54.svg",
+    "static/media/youtubeIcon.svg": "/Ncc-NITJ/static/media/youtubeIcon.f9ababaa5a884308aadac28d20689e07.svg",
+    "static/media/emailIcon.svg": "/Ncc-NITJ/static/media/emailIcon.db9e5eae69f70cf54a924e65c1e1be5f.svg",
+    "index.html": "/Ncc-NITJ/index.html",
+    "static/media/Infinity-1s-100px.svg": "/Ncc-NITJ/static/media/Infinity-1s-100px.602766df6252399943aa.svg",
+    "main.92b55af2.css.map": "/Ncc-NITJ/static/css/main.92b55af2.css.map",
+    "main.fc31e0fb.js.map": "/Ncc-NITJ/static/js/main.fc31e0fb.js.map",
+    "787.975afb15.chunk.js.map": "/Ncc-NITJ/static/js/787.975afb15.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.92b55af2.css",
+    "static/js/main.fc31e0fb.js"
+  ]
+}
