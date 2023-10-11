@@ -1,127 +1,61 @@
-import React from "react";
+import React, { useState } from 'react'
+import { FaBars, FaTimes } from 'react-icons/fa'
+import logo from '../../assets/nccnitj.png'
 
-import "./navbar.css";
-// import "./MenuShrink";
-import ncclogo from "../../assets/NCC Logo.png";
-import clgLogo from "../../assets/NITJ Logo.png";
+import './navbar.css'
+
 const Navbar = () => {
-  return (
-    <div>
-      <div class="fixed-top">
-        <div class="container-fluid navBar">
-          <div class="row ncc-navBar">
-            <div class="NCC-Logo">
-              <img src={ncclogo} alt="NCC Logo" />
-            </div>
-            <div class="col-10" id="navbar_links">
-              <div class="pt-3 navItem" id="ncc-heading">
-                <p class="heading-ncc-hn">नेशनल कैडेट कोर</p>
-                <p class="heading-ncc-en">
-                  National Cadet Corps, NIT Jalandhar
-                </p>
-              </div>
-              <nav class="navbar navbar-expand-lg navbar-dark navLinks py-0 box">
-                <div class="container p-0 m-0">
-                  <div class="navbar-collapse">
-                    <ul class="navbar-nav d-flex justify-content-between w-100 me-auto mb-lg-0">
-                      <li class="nav-item">
-                        <a
-                          class="nav-link active"
-                          aria-current="page"
-                          href="#home"
-                        >
-                          Home
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#about">
-                          About
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#events">
-                          Events
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#blogs">
-                          Blogs
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#faqs">
-                          FAQs
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#annualreports">
-                          Annual Reports
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-            </div>
-            <div class="NITJ-Logo">
-              <a href="https://www.nitj.ac.in/">
-                <img src={clgLogo} alt="NITJ logo" id="NITJ-Logo" />
-              </a>
-            </div>
-            <div class="toggle-icon d-none navItem">
-              <button class="hamburger hamburger--collapse" type="button">
-                <span class="hamburger-box ">
-                  <span class="hamburger-inner"></span>
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-        {/* Mobile-View */}
-        <nav
-          class="navbar navbar-expand-lg navbar-dark navLinks py-0 box"
-          id="nav-mb"
-        >
-          <div class="container">
-            <div class="navbar-collapse">
-              <ul class="navbar-nav d-flex justify-content-between w-100 me-auto mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#home">
-                    Home
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#about">
-                    About
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#events">
-                    Events
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#blogs">
-                    Blogs
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#faqs">
-                    FAQs
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#annualreports">
-                    Annual Reports
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-  );
-};
+  //setting mobile nav
+  const [click, setClick] = useState(false)
+  const handleClick = () => setClick(!click)
+  // change navcolor when scrolling
+  const [color, setColor] = useState(false)
+  const changeColor = () => {
+    if (window.scrollY >= 90) {
+      setColor(true)
+    }
+    else {
+      setColor(false)
+    }
+  }
+  window.addEventListener('scroll', changeColor)
+  //close menu on click
+  const closeMenu = () => setClick(false)
 
-export default Navbar;
+  return (
+    <div className={color ? 'header header-bg' : 'header'}>
+      <nav className='navbar'>
+        <a href='/' className='logo'>
+          <img src={logo} alt='logo' />
+        </a>
+        <div className='hamburger' onClick={handleClick}>
+          {click ? (<FaTimes size={30} style={{ color: '#ffffff' }} />)
+            : (<FaBars size={30} style={{ color: '#ffffff' }} />)}
+
+        </div>
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <li className='nav-item'>
+            <a href='/' onClick={closeMenu}>HOME</a>
+          </li>
+          <li className='nav-item'>
+            <a href='#about' onClick={closeMenu}>ABOUT</a>
+          </li>
+          <li className='nav-item'>
+            <a href='#events' onClick={closeMenu}>EVENTS</a>
+          </li>
+          <li className='nav-item'>
+            <a href='#annualreports' onClick={closeMenu}>ANNUAL REPORTS</a>
+          </li>
+          <li className='nav-item'>
+            <a href='#enrollement' onClick={closeMenu}>ENROLLEMENTS</a>
+          </li>
+          <li className='nav-item'>
+            <a href='#faqs' onClick={closeMenu}>FAQs</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  )
+}
+
+export default Navbar
